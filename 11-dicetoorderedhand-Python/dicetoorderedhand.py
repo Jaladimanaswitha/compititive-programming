@@ -12,4 +12,10 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	l=[a,b,c]
+	l.sort(reverse=True)
+	res=100*l[0]+10*l[1]+l[2]
+	return res
+
+
+# dicetoorderedhand(2,2,3)
