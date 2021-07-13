@@ -41,3 +41,13 @@ def alphaAsia():
 
 # Note: Check for test cases to understand the output format.
 locations = {'North America': {'USA': ['Mountain View']}}
+# locations={'Asia': {'china':['Shanghai']}}
+locations['Asia']= {'china':['Shanghai']}
+locations['Africa']={'Egypt':['Cairo']}
+locations['Asia']={'India':['Bangalore']}
+locations['North America']['USA'].append['Atlantic']
+
+print(locations)
+
+
+
