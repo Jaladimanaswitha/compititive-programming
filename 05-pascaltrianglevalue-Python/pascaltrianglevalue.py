@@ -5,8 +5,22 @@
 # each row starts at column 0. If either row or col 
 # are not legal values, return None, instead of crashing. 
 
-
-
-
+def fun(a):
+	if(a==0):
+		return 1
+	b=1
+	for i in range(a,1,-1):
+		b=b*i
+	return b
+	
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	if(row<0 or col<0):
+		return None
+	elif(col>row):
+		return 0
+	val=fun(row-col)*fun(col)
+	res=int(fun(row)/val)
+	return res
+
+# fun_pascaltrianglevalue(0,0)
+	
