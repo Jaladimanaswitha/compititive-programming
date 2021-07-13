@@ -45,7 +45,7 @@ locations = {'North America': {'USA': ['Mountain View']}}
 locations['Asia']= {'china':['Shanghai']}
 locations['Africa']={'Egypt':['Cairo']}
 locations['Asia']={'India':['Bangalore']}
-locations['North America']['USA'].append['Atlantic']
+# locations['North America']['USA'].append['Atlantic']
 
 print(locations)
 
