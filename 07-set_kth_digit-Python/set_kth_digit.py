@@ -30,7 +30,7 @@ def fun_set_kth_digit(n, k, d):
 	else:
 		return -(int(n))
 
-fun_set_kth_digit(468,2,1)
+# fun_set_kth_digit(468,2,1)
 	
 	
 
