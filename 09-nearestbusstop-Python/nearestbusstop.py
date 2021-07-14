@@ -6,6 +6,20 @@
 # and the nearest bus stop to 13 street is 16th street.
 
 
-
+import math
 def fun_nearestbusstop(street):
-	return -1
+	if(street<5):
+		return 0
+	if(street%8==0):
+		return street
+	a=str(street/8)
+	b=a.split('.')
+	b[1]=b[1][::-1]
+	c=int(b[1])%10
+	if(c>5):
+		return int(b[0])*8+8
+	else:
+		return int(b[0])*8
+	# return -1
+# print(fun_nearestbusstop(5))
+# print(fun_nearestbusstop(16))
