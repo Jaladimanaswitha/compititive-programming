@@ -15,6 +15,7 @@ def fun_applycaesarcipher(msg, shift):
 	for i in msg:
 		if(i.isalpha()==False):
 			res+=i
+			continue
 		a=ord(i)
 		if((a+shift<91 and a+shift>64) or(a+shift<123 and a+shift>96)):
 			res+=chr(a+shift)
