@@ -11,8 +11,23 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	res=''
+	for i in msg:
+		if(i.isalpha()==False):
+			res+=i
+		a=ord(i)
+		if((a+shift<91 and a+shift>64) or(a+shift<123 and a+shift>96)):
+			res+=chr(a+shift)
+		elif(shift<0):
+			res+=chr(a+shift+26)
+		else:
+		# elif(a+shift>90 or a+shift<122 ):
+		# elif(shif<0):
+			res+=chr(a+shift-26)
+		# else:
+		# 	res+=chr(a+shift+26)
+	return res
 
-
+print(fun_applycaesarcipher("We Attack At Dawn", 1))
 
 
