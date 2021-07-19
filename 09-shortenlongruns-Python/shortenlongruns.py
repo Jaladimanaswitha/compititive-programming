@@ -11,4 +11,18 @@
 
 def shortenlongruns(L, k):
 	# Your code goes here
-	pass
+	# for i in range(len(L)):
+	i=0
+	while(i<len(L)):
+		c=0
+		for j in range(k):
+			if(i+j<len(L)):
+				if(L[i]==L[i+j]):
+					c+=1
+		if(c==k):
+			L.pop(i)
+			continue
+		i+=1
+	return L
+
+# print(shortenlongruns([2, 3, 5, 5, 5, 9], 3))
