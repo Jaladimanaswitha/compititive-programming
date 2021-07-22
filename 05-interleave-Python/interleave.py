@@ -8,5 +8,18 @@
 
 
 def fun_interleave(s1,s2):
-	return ""
+	if(len(s1)>=len(s2)):
+		a=len(s2)
+	else:
+		a=len(s1)
+	new=''
+	for i in range(a):
+		new+=s1[i]+s2[i]
+	if(a==len(s1)):
+		new+=s2[i+1:]
+		return new
+	new+=s1[i+1:]
+	return new
+
+# print(fun_interleave('a#', 'cD!f2'))
 	
