@@ -17,6 +17,30 @@
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
 
+def happy(n):
+	s=0
+	while(n>0):
+		s+=(n%10)**2
+		n=n//10
+	print(s,'s')
+	return s
+
+
+
 def ishappynumber(n):
 	# your code goes here
-	pass
+	if(n<1):
+		return False
+	if(n==1):
+		return True
+	a=set()
+	while(n>1 and n not in a):
+		p=happy(n)
+		if(p==1):
+			return True
+		a.add(n)
+		n=p
+	return False
+
+# print(ishappynumber(404))
+
