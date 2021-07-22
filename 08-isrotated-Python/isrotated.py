@@ -6,4 +6,13 @@
 
 def isrotated(str1, str2):
 	#Your code goes here
-	pass
+	i=0
+	while(i<len(str1)):
+		str1=str1[1:]+str1[:1]
+		print(str1)
+		if(str1==str2):
+			return True
+		i+=1
+	return False
+
+# print(isrotated('xyz','zyx'))
