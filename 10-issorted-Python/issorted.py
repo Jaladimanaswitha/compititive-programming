@@ -7,4 +7,20 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	if(len(a)==0 or len(a)==1):
+		return True
+	des=False
+	if(a[0]>a[1]):
+		des=True
+	for i in range(len(a)-1):
+		if(des):
+			if(a[i]<a[i+1]):
+				return False
+		else:
+			if(a[i]>a[i+1]):
+				return False
+	return True
+
+
+	
+
