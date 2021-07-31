@@ -10,5 +10,15 @@
 
 
 def fun_getaverage(s): 
-	return 0.0
+	a=s.split(',')
+	c=0
+	s=0
+	for i in a:
+		if(i.isdigit()):
+			s+=int(i)
+			c+=1
+	if c==0:
+		return 0
+	return s/c
 
+# print(fun_getaverage("13,excused,14,absent"))
