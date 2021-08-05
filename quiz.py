@@ -2,11 +2,45 @@
 #   a = [ [ 88,  80, 91 ],
 #         [ 68, 100, -1 ]
 #       ]
-# This list indicates that student0 scored 88 on quiz0, 80 on quiz1, and 91 on quiz2. Also, student1 scored 68 on quiz0, 100 on quiz1, and did not take quiz2. The function returns the quiz with the highest average. In this case, quiz0 average is 78, quiz1 average is 90, and quiz2 average is 91 (since we ignore the -1). Thus, quiz2 is the best, and so the function returns 2 in this case. You are not responsible for malformed input, except you should return None if there are no quizzes. Also, resolve ties in favor of the lower quiz number. Here is a test function for you:
+# This list indicates that student0 scored 88 on quiz0, 80 on quiz1, and 91 on quiz2. 
+# Also, student1 scored 68 on quiz0, 100 on quiz1, and did not take quiz2. The function 
+# returns the quiz with the highest average. In this case, quiz0 average is 78, quiz1 average is 90, 
+# and quiz2 average is 91 (since we ignore the -1). Thus, quiz2 is the best, and so the function
+#  returns 2 in this case. You are not responsible for malformed input, except you should return None if there 
+#  are no quizzes. Also, resolve ties in favor of the lower quiz number. Here is a test function for you:
 
 def bestQuiz(l):
-    # Your  code goes ehre...
-    pass
+      s=[]
+      for j in range(len(l[0])):
+            if(l[0][j]!=-1 and l[1][j]!=-1):
+                  a=(l[0][j]+l[1][j])/2
+                  s.append(a)
+            elif(l[0][j]==-1 and l[1][j]==-1):
+                  s.append(0)
+            elif(l[0][j]==-1 and l[1][j]!=-1):
+                  s.append(l[1][j])
+            else:
+                  s.append(l[0][j])
+      print(s)
+      if(max(s)==0):
+            return None
+      elif(s[0]>s[1] and s[0]>s[2]):
+            return 0
+      elif(s[1]>s[0] and s[1]>s[2]):
+            return 1
+      elif(s[2]>s[0] and s[2]>s[1]):
+            return 2
+      elif(s[1]==s[2]):
+            return 1
+      elif(s[0]==s[1]):
+            return 0
+      
+
+# a = [ [ 88,  80, 91 ],
+#           [ 68, 100, -1 ]]
+
+# print(bestQuiz(a))
+
 
 def testBestQuiz():
     print('Testing bestQuiz()...', end='')
@@ -23,3 +57,6 @@ def testBestQuiz():
           [-1, -1, -1 ]]
     assert(bestQuiz(a) == None)
     print('All test cases passed...!')
+
+
+testBestQuiz()
