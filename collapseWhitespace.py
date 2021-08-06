@@ -16,7 +16,22 @@
 
 def cw(s):
     # Your code goes here...
-    return ""
+    a=''
+    f=False
+    for i in s:
+        if(i.isalpha()):
+            if(f==False):
+                a+=i
+            else:
+                a+=' '+i
+            f=False
+        else:
+            f=True
+    if(s[-1].isalpha()==False):
+        a+=' '
+    return a
+
+
 
 assert(cw("a\nb") == "a b")
 assert(cw("a\n   \t    b") == "a b")
